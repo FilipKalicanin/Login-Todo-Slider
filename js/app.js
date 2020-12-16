@@ -73,5 +73,12 @@ btn_toDoAdd.addEventListener('click', (e) => {
     btn_removeTask.className = 'btnRemove';
     divSpan.appendChild(btn_removeTask);
 
+    let btn_finishTask = document.createElement('button');
+    btn_finishTask.innerHTML = '&check;';
+    btn_finishTask.className = 'btnDone';
+    divSpan.appendChild(btn_finishTask);
+
+
+
 
 })

@@ -2,24 +2,55 @@
     display: inline-block;
     width: 35%;
     margin-top: 3rem;
+    padding: 2rem;
 }
 
-.task { //list
+.task {
     padding: 2rem;
     display: inline-block;
     width: 100%;
-    border-bottom: 1px solid red;
+    margin-bottom: 1rem;
+    background-color:  #FFE7D0;
+
+    &:hover {
+        background-color: #f8d3b0;
+    }
 }
 
-.taskText { //listitem
+.taskText {
     display: inline-block;
     padding: .5rem;
-    font-size: 1.6rem;
-    color: whitesmoke;
+    font-size: 1.5rem;
+    color:#1B1B1B;
+}
+
+.btnDone{ //btnRemove
+    color:#1B1B1B;
+    padding: .5rem;
+    font-size: 1.8rem;
+    width: 5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    float: right;
+
+    &:hover{
+        text-shadow: 0rem .4rem 2rem rgba (#0C3B2E, 1);
+        transition: .3s;
+        color:  #0C3B2E;
+        outline: none;
+    }
+    
+    &:active{
+        box-shadow: none;
+        transition: .1s;
+        outline: none;
+    }
+
 }
 
 .btnRemove{ //btnRemove
-    color: whitesmoke;
+    color: #1B1B1B;
     padding: .5rem;
     font-size: 2.5rem;
     width: 5rem;
@@ -29,9 +60,9 @@
     float: right;
 
     &:hover{
-        text-shadow: 0rem .4rem 2rem rgba(green, 1);
+        text-shadow: 0rem .4rem 2rem rgba(rgb(75, 34, 34), 1);
         transition: .3s;
-        color: green;
+        color: rgb(75, 34, 34);
         outline: none;
     }
     
