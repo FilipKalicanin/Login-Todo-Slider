@@ -1,0 +1,26 @@
+.clickMe {
+    font-family: 'Lobster';
+    font-size: 7rem;
+    outline: none;
+    border: none;
+    border-radius: 50rem;
+    padding: 1rem 5rem;
+    background-color: transparent;
+    color: whitesmoke;
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clickMe:hover{
+    box-shadow: 0 1rem 2rem rgba(#000000, 1);
+    transition: .3s;
+}
+
+.clickMe:active{
+    box-shadow: none;
+    transition: .1s;
+}

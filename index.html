@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+    <title>Welcome</title>
+</head>
+<body>
+    <section class="section-login" id="sectionLogin">
+        <button class="clickMe" id="clickMe">Click Me!</button>
+        <div class="box">
+            <form action="#" class="visibilityNone" id="popUp" name="form">
+                <div class="form__header">
+                    <h2 class="form__heading">LogIn</h2>
+                    <button class="form__btn-close" id="btn-close">&times;</button>
+                </div>
+                <div class="form__body">
+                    <input type="email" required placeholder="E-mail" class="form__inputEmail" id="inputEmail"></input>
+                    <input type="password" required placeholder="Password" class="form__inputPassword" id="inputPassword"></input>
+                <div class="form__align-this">
+                    <input type="checkbox" required class="form__terms"></input><label class="form__label">I agree to terms &amp; conditions.</label>
+                </div>
+                    <button class="form__btn-submit" id="btn-submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="section-site visibilityNone" id="sectionSite">
+        <div class="todoBox">
+            <form action="#" class="todoForma" name="todoForma">
+                <input type="text" placeholder="Search..." class="todoForma__search" ></input>
+                <label for="inputTask" class="todoForma__labelInputTask">New Task:</label>
+                <input name="inputTask" type="text" class="todoForma__inputTask" placeholder="Task..." id="inputTask"></input>
+                <button class="todoForma__btnTodoAdd" id="btn-ToDoAdd">&check;</button>
+            </form>
+        </div>
+        <div class="newTasks" id="divNewTasks">
+            <!-- <div class="task">
+                <p class="task__taskText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quis.</p>
+                <button class="task__btnRemove">&times;</button>
+            </div> -->
+        </div>
+    </section>
+</body>
+</html>

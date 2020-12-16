@@ -1,0 +1,119 @@
+.box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form {
+    width: 30rem;
+    height: 40rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: .5rem;
+    background-color: whitesmoke;
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        height: 20%;
+    };
+
+    &__heading{
+        width: 5rem;
+        font-family: 'Lobster';
+        font-size: 4rem;
+    };
+
+    &__btn-close{
+        width: 3.6rem;
+        height: 3.6rem;
+        outline: none;
+        background: none;
+        border: 1px solid #ff6a00;
+        border-radius: 50rem;
+        font-size: 3rem;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 1rem 2rem rgba(#ff6a00, .5);
+            transition: .2s;
+        }
+    };
+
+    /////////////////////////////////////////////////////////////////
+
+    &__body{
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    };
+
+    &__inputEmail,
+    &__inputPassword{
+        padding: .8rem;
+        border: 1px solid rgb(58, 58, 148);
+        border-radius: 50rem;
+        background-color: transparent;
+        color: rgb(58, 58, 148);
+    };
+
+    &__inputEmail::placeholder,
+    &__inputPassword::placeholder {
+        color: rgb(58, 58, 148);
+        padding-left: 2rem;
+    }
+
+    &__inputEmail:hover,
+    &__inputPassword:hover,
+    &__inputEmail:focus,
+    &__inputPassword:focus {
+        outline: none;
+        padding-left: 2rem;
+        box-shadow: 0rem .6rem 1.5rem rgba(#ff6a00, .7);
+        transition: .2s;
+    }
+
+    &__align-this{
+        display: flex;
+        align-items: center;
+    }
+
+
+    &__terms{
+        margin-right: 1rem;
+    };
+
+    &__label{
+        width: 17rem;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        color: rgb(114, 114, 114);
+    }
+
+    &__btn-submit{
+        background-color: transparent;
+        outline: none;
+        border: 1px solid  rgb(58, 58, 148);
+        border-radius: 50rem;
+        color: rgb(58, 58, 148);
+        padding: .8rem;
+    };
+
+    &__btn-submit:hover{
+        box-shadow: 0rem .6rem 1.5rem rgba(#ff6a00, .7);
+        transition: .2s;
+        cursor: pointer;
+    };
+
+    &__btn-submit:active{
+        box-shadow: none;
+        transition: .2s;
+        cursor: pointer;
+    };
+}

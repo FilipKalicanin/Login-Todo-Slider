@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  height: 100vh; }
+
+.visibilityNone {
+  display: none; }
+
+.section-login {
+  width: 100%;
+  height: 100%; }
+
+.section-site {
+  width: 100%;
+  height: 100%; }
+
+.clickMe {
+  font-family: 'Lobster';
+  font-size: 7rem;
+  outline: none;
+  border: none;
+  border-radius: 50rem;
+  padding: 1rem 5rem;
+  background-color: transparent;
+  color: whitesmoke;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.clickMe:hover {
+  box-shadow: 0 1rem 2rem black;
+  transition: .3s; }
+
+.clickMe:active {
+  box-shadow: none;
+  transition: .1s; }
+
+.box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.form {
+  width: 30rem;
+  height: 40rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: .5rem;
+  background-color: whitesmoke; }
+  .form__header {
+    display: flex;
+    justify-content: space-between;
+    height: 20%; }
+  .form__heading {
+    width: 5rem;
+    font-family: 'Lobster';
+    font-size: 4rem; }
+  .form__btn-close {
+    width: 3.6rem;
+    height: 3.6rem;
+    outline: none;
+    background: none;
+    border: 1px solid #ff6a00;
+    border-radius: 50rem;
+    font-size: 3rem;
+    cursor: pointer; }
+    .form__btn-close:hover {
+      box-shadow: 0 1rem 2rem rgba(255, 106, 0, 0.5);
+      transition: .2s; }
+  .form__body {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+  .form__inputEmail, .form__inputPassword {
+    padding: .8rem;
+    border: 1px solid #3a3a94;
+    border-radius: 50rem;
+    background-color: transparent;
+    color: #3a3a94; }
+  .form__inputEmail::placeholder, .form__inputPassword::placeholder {
+    color: #3a3a94;
+    padding-left: 2rem; }
+  .form__inputEmail:hover, .form__inputPassword:hover, .form__inputEmail:focus, .form__inputPassword:focus {
+    outline: none;
+    padding-left: 2rem;
+    box-shadow: 0rem 0.6rem 1.5rem rgba(255, 106, 0, 0.7);
+    transition: .2s; }
+  .form__align-this {
+    display: flex;
+    align-items: center; }
+  .form__terms {
+    margin-right: 1rem; }
+  .form__label {
+    width: 17rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: #727272; }
+  .form__btn-submit {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #3a3a94;
+    border-radius: 50rem;
+    color: #3a3a94;
+    padding: .8rem; }
+  .form__btn-submit:hover {
+    box-shadow: 0rem 0.6rem 1.5rem rgba(255, 106, 0, 0.7);
+    transition: .2s;
+    cursor: pointer; }
+  .form__btn-submit:active {
+    box-shadow: none;
+    transition: .2s;
+    cursor: pointer; }
+
+.todoBox {
+  width: 35%;
+  height: 15rem;
+  border-bottom: 1px solid green; }
+
+.todoForma {
+  padding: 3rem; }
+  .todoForma__search {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid green;
+    border-radius: 50rem;
+    font-size: 2rem;
+    color: green; }
+    .todoForma__search::placeholder {
+      padding-left: 2rem;
+      color: green; }
+    .todoForma__search:focus {
+      padding-left: 2rem;
+      color: green;
+      box-shadow: 0rem 0.6rem 1.5rem rgba(0, 128, 0, 0.7);
+      transition: .2s; }
+  .todoForma__labelInputTask {
+    display: inline-block;
+    padding: .5rem;
+    font-size: 2rem;
+    font-family: 'Sans-sarif';
+    font-weight: 100;
+    color: white;
+    margin-right: 1rem; }
+  .todoForma__inputTask {
+    display: inline-block;
+    padding: .5rem;
+    width: 60%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid green;
+    outline: none;
+    margin-right: 2rem; }
+    .todoForma__inputTask::placeholder {
+      padding-left: 2rem;
+      color: green; }
+    .todoForma__inputTask:focus {
+      padding-left: 2rem;
+      color: green;
+      outline: none;
+      box-shadow: 0rem 0.6rem 1.5rem rgba(0, 128, 0, 0.7);
+      transition: .2s; }
+  .todoForma__btnTodoAdd {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: inline-block;
+    color: green;
+    font-size: 2rem;
+    background-color: transparent;
+    border: 1px solid green;
+    border-radius: 50rem;
+    outline: none; }
+    .todoForma__btnTodoAdd:hover {
+      box-shadow: 0 1rem 2rem green;
+      transition: .3s;
+      outline: none; }
+    .todoForma__btnTodoAdd:active {
+      box-shadow: none;
+      transition: .1s;
+      outline: none; }
+
+.newTasks {
+  display: inline-block;
+  width: 35%;
+  margin-top: 3rem; }
+
+.task {
+  padding: 2rem;
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid red; }
+
+.taskText {
+  display: inline-block;
+  padding: .5rem;
+  font-size: 1.6rem;
+  color: whitesmoke; }
+
+.btnRemove {
+  color: whitesmoke;
+  padding: .5rem;
+  font-size: 2.5rem;
+  width: 5rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  float: right; }
+  .btnRemove:hover {
+    text-shadow: 0rem 0.4rem 2rem green;
+    transition: .3s;
+    color: green;
+    outline: none; }
+  .btnRemove:active {
+    box-shadow: none;
+    transition: .1s;
+    outline: none; }

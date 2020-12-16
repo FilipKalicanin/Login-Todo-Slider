@@ -1,0 +1,96 @@
+.todoBox {
+    width: 35%;
+    height: 15rem;
+    border-bottom: 1px solid green;
+
+}
+
+.todoForma{
+    padding: 3rem;
+
+    &__search{
+        display: block;
+        width: 100%;
+        padding: .5rem;
+        margin-bottom: 2rem;
+        background-color: transparent;
+        outline: none;
+        border: 1px solid green;
+        border-radius: 50rem;
+        font-size: 2rem;
+        color: green;
+
+        &::placeholder{
+            padding-left: 2rem;
+            color: green;
+        }
+
+        &:focus{
+            padding-left: 2rem;
+            color: green;
+            box-shadow: 0rem .6rem 1.5rem rgba(green, .7);
+            transition: .2s;
+        }
+
+
+    }
+
+    &__labelInputTask{
+        display: inline-block;
+        padding: .5rem;
+        font-size: 2rem;
+        font-family: 'Sans-sarif';
+        font-weight: 100;
+        color: white;
+        margin-right: 1rem;
+    }
+
+    &__inputTask{
+        display: inline-block;
+        padding: .5rem;
+        width: 60%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid green;
+        outline: none;
+        margin-right: 2rem;
+
+        &::placeholder{
+            padding-left: 2rem;
+            color: green;
+        }
+
+        &:focus{
+            padding-left: 2rem;
+            color: green;
+            outline: none;
+            box-shadow: 0rem .6rem 1.5rem rgba(green, .7);
+            transition: .2s;
+        }
+    }
+
+    &__btnTodoAdd {
+        width: 3.5rem;
+        height: 3.5rem;
+        display: inline-block;
+        color: green;
+        font-size: 2rem;
+        background-color: transparent;
+        border: 1px solid green;
+        border-radius: 50rem;
+        outline: none;
+
+        &:hover{
+            box-shadow: 0 1rem 2rem rgba(green, 1);
+            transition: .3s;
+            outline: none;
+        }
+        
+        &:active{
+            box-shadow: none;
+            transition: .1s;
+            outline: none;
+        }
+
+    }
+}

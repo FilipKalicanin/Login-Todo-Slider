@@ -1,0 +1,15 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "Simple Log in",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "FK",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "webpack": "^5.10.1"
+  }
+}

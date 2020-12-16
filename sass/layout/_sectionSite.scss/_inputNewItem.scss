@@ -1,0 +1,44 @@
+.newTasks {
+    display: inline-block;
+    width: 35%;
+    margin-top: 3rem;
+}
+
+.task { //list
+    padding: 2rem;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid red;
+}
+
+.taskText { //listitem
+    display: inline-block;
+    padding: .5rem;
+    font-size: 1.6rem;
+    color: whitesmoke;
+}
+
+.btnRemove{ //btnRemove
+    color: whitesmoke;
+    padding: .5rem;
+    font-size: 2.5rem;
+    width: 5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    float: right;
+
+    &:hover{
+        text-shadow: 0rem .4rem 2rem rgba(green, 1);
+        transition: .3s;
+        color: green;
+        outline: none;
+    }
+    
+    &:active{
+        box-shadow: none;
+        transition: .1s;
+        outline: none;
+    }
+
+}
