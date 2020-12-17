@@ -10,11 +10,9 @@ const popUp = document.getElementById('popUp');
 const inputEmail = document.getElementById('inputEmail').value;
 const inputPassword = document.getElementById('inputPassword').value;
 
-//todoList
-
-
-
-//Switching classes in order to show or hide element
+///////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////// LOG IN PAGE //////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
 
 let clickMe = () => {
     btn_clickMe.classList.remove('clickMe');
@@ -34,12 +32,6 @@ let closePopUp = () => {
     btn_clickMe.disabled = true;
 }
 
-// let formValidation = () => {
-//     if(inputPassword.value == 'password'){
-//         alert('Password weak. Please use stronger combination.')
-//     }
-// }
-
 btn_clickMe.addEventListener('click', clickMe);
 
 btn_closePopUp.addEventListener('click', closePopUp);
@@ -49,36 +41,53 @@ btn_submit.addEventListener('click', function(){
     document.getElementById('sectionLogin').classList.add('visibilityNone');
 });
 
-{/* <div class="task">
-<p class="task__taskText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quis.</p>
-<button class="task__btnRemove">&times;</button>
-</div> */}
+///////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////// TO DO LIST ///////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
 
 btn_toDoAdd.addEventListener('click', (e) => {
     e.preventDefault();
 
     let inputTask = document.getElementById('inputTask').value;
 
-    let divSpan = document.createElement('div');
-    divSpan.className = 'task';
-    document.getElementById('divNewTasks').appendChild(divSpan);
+    if(inputTask === ''){
+        alert('New Task cannot be empty.');
+    }else {
+        let divSpan = document.createElement('div');
+        divSpan.className = 'task';
+        document.getElementById('divNewTasks').appendChild(divSpan);
+    
+        let newTaskText = document.createElement('p');
+        newTaskText.className = 'taskText';
+        newTaskText.innerHTML = inputTask;
+        divSpan.appendChild(newTaskText);
+    
+        let btn_removeTask = document.createElement('button');
+        btn_removeTask.innerHTML = '<i class="fas fa-trash-alt">';
+        btn_removeTask.className = 'btnRemove';
+        btn_removeTask.id = 'btnTaskRemove';
+        divSpan.appendChild(btn_removeTask);
+        btn_removeTask.addEventListener('click', (e) => {
+            e.preventDefault();
+            btn_removeTask.parentElement.remove();
+        });
+    
+        let btn_finishTask = document.createElement('button');
+        btn_finishTask.innerHTML = '<i class="fas fa-check">';
+        btn_finishTask.className = 'btnDone';
+        btn_finishTask.id = 'btnTaskDone';
+        btn_finishTask.addEventListener('click', (e) => {
+            e.preventDefault();
+    
+            newTaskText.classList.toggle('taskDone');
+        });
+    
+        divSpan.appendChild(btn_finishTask);
+        
+    }
 
-    let newTaskText = document.createElement('p');
-    newTaskText.className = 'taskText';
-    newTaskText.innerHTML = inputTask;
-    divSpan.appendChild(newTaskText);
-
-    let btn_removeTask = document.createElement('button');
-    btn_removeTask.innerHTML = '&times;';
-    btn_removeTask.className = 'btnRemove';
-    divSpan.appendChild(btn_removeTask);
-
-    let btn_finishTask = document.createElement('button');
-    btn_finishTask.innerHTML = '&check;';
-    btn_finishTask.className = 'btnDone';
-    divSpan.appendChild(btn_finishTask);
-
-
-
+    inputTask = '';
 
 })
+
+

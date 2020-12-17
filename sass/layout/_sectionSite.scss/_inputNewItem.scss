@@ -1,5 +1,4 @@
 .newTasks {
-    display: inline-block;
     width: 35%;
     margin-top: 3rem;
     padding: 2rem;
@@ -10,6 +9,8 @@
     display: inline-block;
     width: 100%;
     margin-bottom: 1rem;
+    border: .2rem solid #0C3B2E;
+    border-radius: 1.5rem;
     background-color:  #FFE7D0;
 
     &:hover {
@@ -20,56 +21,51 @@
 .taskText {
     display: inline-block;
     padding: .5rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color:#1B1B1B;
 }
 
-.btnDone{ //btnRemove
-    color:#1B1B1B;
+.btnDone{ //btnDone
+    color:#2E8B57;
     padding: .5rem;
-    font-size: 1.8rem;
-    width: 5rem;
+    font-size: 2rem;
     background-color: transparent;
     border: none;
     outline: none;
     float: right;
+    cursor: pointer;
 
     &:hover{
-        text-shadow: 0rem .4rem 2rem rgba (#0C3B2E, 1);
+        transform: scale(1.4);
         transition: .3s;
-        color:  #0C3B2E;
-        outline: none;
     }
     
     &:active{
-        box-shadow: none;
+        transform: scale(1);
         transition: .1s;
-        outline: none;
     }
 
 }
 
 .btnRemove{ //btnRemove
-    color: #1B1B1B;
+    color: 	#B22222;
     padding: .5rem;
-    font-size: 2.5rem;
-    width: 5rem;
+    font-size: 2rem;
+    margin-left: 1rem;
     background-color: transparent;
     border: none;
     outline: none;
     float: right;
+    cursor: pointer;
 
     &:hover{
-        text-shadow: 0rem .4rem 2rem rgba(rgb(75, 34, 34), 1);
+        transform: scale(1.3);
         transition: .3s;
-        color: rgb(75, 34, 34);
-        outline: none;
     }
     
     &:active{
-        box-shadow: none;
+        transform: scale(1);
         transition: .1s;
-        outline: none;
     }
 
 }
