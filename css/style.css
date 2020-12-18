@@ -34,8 +34,14 @@ body {
 
 .taskDone {
   text-decoration: line-through;
-  color: transparent;
-  text-shadow: 0 1px 3px #82c468; }
+  opacity: 0.5;
+  text-shadow: 0 1px 3px #82c468;
+  transition: .1s; }
+
+.fall {
+  transform: translateY(5rem) rotateZ(20deg);
+  opacity: 0;
+  transition: .3s; }
 
 .clickMe {
   font-family: 'Lobster';

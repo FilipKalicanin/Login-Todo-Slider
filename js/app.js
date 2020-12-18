@@ -69,7 +69,10 @@ btn_toDoAdd.addEventListener('click', (e) => {
         divSpan.appendChild(btn_removeTask);
         btn_removeTask.addEventListener('click', (e) => {
             e.preventDefault();
-            btn_removeTask.parentElement.remove();
+            divSpan.classList.add('fall');
+            divSpan.addEventListener('transitionend', function(){
+                divSpan.remove();
+            })
         });
     
         let btn_finishTask = document.createElement('button');
@@ -79,6 +82,7 @@ btn_toDoAdd.addEventListener('click', (e) => {
         btn_finishTask.addEventListener('click', (e) => {
             e.preventDefault();
     
+            divSpan.classList.toggle('taskDone');
             newTaskText.classList.toggle('taskDone');
         });
     

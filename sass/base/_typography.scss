@@ -1,5 +1,12 @@
 .taskDone {
     text-decoration: line-through;
-    color: transparent;
+    opacity: 0.5;
     text-shadow: 0 1px 3px rgb(130, 196, 104);
+    transition: .1s;
+}
+
+.fall {
+    transform: translateY(5rem) rotateZ(20deg);
+    opacity: 0;
+    transition: .3s;
 }
