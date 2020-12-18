@@ -1,10 +1,27 @@
 let btnPrev = document.getElementById('btn-galleryPrev');
 let btnNext = document.getElementById('btn-galleryNext');
 
-btnPrev.addEventListener('click', (e) => {
-    console.log('PrevClicked')
-})
+let photo = document.getElementById('galleryPhoto');
+
+let count = 1;
 
 btnNext.addEventListener('click', (e) => {
-    console.log('NextClicked')
+    
+    if(count > 4){
+        count = 1;
+    }
+    photo.src = `img/picture${count}.png`;
+    count++
+
+})
+
+
+btnPrev.addEventListener('click', (e) => {
+
+    if(count < 1){
+        count = 4;
+    }
+    photo.src = `img/picture${count}.png`;
+    count--
+
 })

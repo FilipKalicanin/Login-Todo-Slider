@@ -1,12 +1,16 @@
-const btn_toDoAdd = document.getElementById('btn-ToDoAdd');
+// INPUT COLLECTING
 
+const btn_toDoAdd = document.getElementById('btn-ToDoAdd');
 const selectList = document.getElementById('selectList');
 const selectOption = document.getElementsByTagName('option');
-
 const searchTab = document.getElementById('todoSearch');
 
-let todoArray = [];
+// Array of ToDos
+let todoArray = [{
+    tekst: inputTask.value
+}];
 
+// Function for creation of new List Item on click
 const newElement = () => {
 
     let inputTask = document.getElementById('inputTask').value;
@@ -20,6 +24,7 @@ const newElement = () => {
     newTaskText.innerHTML = inputTask;
     divSpan.appendChild(newTaskText);
 
+    // Button to remove task from Task item
     let btn_removeTask = document.createElement('button');
     btn_removeTask.innerHTML = '<i class="fas fa-trash-alt">';
     btn_removeTask.className = 'btnRemove';
@@ -33,6 +38,7 @@ const newElement = () => {
         })
     });
 
+    // Button to mark Item as Finished
     let btn_finishTask = document.createElement('button');
     btn_finishTask.innerHTML = '<i class="fas fa-check">';
     btn_finishTask.className = 'btnDone';
@@ -48,6 +54,8 @@ const newElement = () => {
     todoArray.push(divSpan);
 }
 
+
+// Implemetation of 'newElement' function + basic input check
 btn_toDoAdd.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -60,7 +68,10 @@ btn_toDoAdd.addEventListener('click', (e) => {
 
 })
 
+
+// Select button / Done with class manipulation
 selectList.addEventListener('change', (e) => {
+
     if(selectList.value == 'done'){
         todoArray.forEach(el => {
             if(el.classList.contains('taskDone')){
@@ -83,22 +94,19 @@ selectList.addEventListener('change', (e) => {
 
 })
 
-const filterArray = (todoArray) => {
 
-    todoArray.forEach(el => {
+// Search tab
+searchTab.addEventListener('input', (e) => {
+
+    console.log(searchTab.value);
+    console.log(todoArray);
+
+    todoArray.filter(el => {
+        if(el.tekst.toLowerCase().includes(e.target.value.toLowerCase())){
         el.style.display = 'inline-block';
-    })
-}
-
-
-searchTab.addEventListener('input',(e) => {
-    if(e.target.value){
-        todoArray.filter(el => el.newTaskText.toLowerCase().includes(e.target.value.toLowerCase()))
-        filterArray();
+    }else{
+        el.style.display = 'none';
     }
+    });
 })
-
-
-
-
 
