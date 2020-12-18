@@ -15,6 +15,7 @@ const inputPassword = document.getElementById('inputPassword').value;
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 let clickMe = () => {
+
     btn_clickMe.classList.remove('clickMe');
     btn_clickMe.classList.add('visibilityNone');
 
@@ -23,6 +24,7 @@ let clickMe = () => {
 }
 
 let closePopUp = () => {
+
     popUp.classList.remove('form');
     popUp.classList.add('visibilityNone');
 
@@ -36,7 +38,10 @@ btn_clickMe.addEventListener('click', clickMe);
 
 btn_closePopUp.addEventListener('click', closePopUp);
 
-btn_submit.addEventListener('click', function(){
+btn_submit.addEventListener('click', (e) => {
+
+    e.preventDefault();
+
     document.getElementById('sectionSite').classList.remove('visibilityNone');
     document.getElementById('sectionLogin').classList.add('visibilityNone');
 });
