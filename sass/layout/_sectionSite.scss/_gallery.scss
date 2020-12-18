@@ -39,6 +39,16 @@
         outline: none;
         border: none;
         background-color: transparent;
+        cursor: pointer;
+        // &:hover{
+        //     transform: scale(1.4);
+        //     transition: .3s;
+        // }
+        
+        // &:active{
+        //     transform: scale(1);
+        //     transition: .1s;
+        // }
     }
 
     &__btnGalleryNext {
@@ -51,5 +61,15 @@
         outline: none;
         border: none;
         background-color: transparent;
+        cursor: pointer;
+        // &:hover{
+        //     transform: scale(1.4);
+        //     transition: .3s;
+        // }
+        
+        // &:active{
+        //     transform: scale(1);
+        //     transition: .1s;
+        // }
     }
 }

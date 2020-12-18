@@ -323,7 +323,8 @@ body {
     color: whitesmoke;
     outline: none;
     border: none;
-    background-color: transparent; }
+    background-color: transparent;
+    cursor: pointer; }
   .gallery__btnGalleryNext {
     position: absolute;
     top: 50%;
@@ -333,4 +334,5 @@ body {
     color: whitesmoke;
     outline: none;
     border: none;
-    background-color: transparent; }
+    background-color: transparent;
+    cursor: pointer; }

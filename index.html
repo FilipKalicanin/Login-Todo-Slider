@@ -9,6 +9,9 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/app.js" defer></script>
+    <script src="js/login.js" defer></script>
+    <script src="js/todo.js" defer></script>
+    <script src="js/gallery.js" defer></script>
     <title>Welcome</title>
 </head>
 <body>
@@ -20,13 +23,15 @@
                     <h2 class="form__heading">LogIn</h2>
                     <button class="form__btn-close" id="btn-close">&times;</button>
                 </div>
+
                 <div class="form__body">
-                    <input type="email" required placeholder="E-mail" class="form__inputEmail" id="inputEmail"></input>
+                    <input type="text" required placeholder="Username" class="form__inputEmail" id="inputEmail"></input>
                     <input type="password" required placeholder="Password" class="form__inputPassword" id="inputPassword"></input>
-                <div class="form__align-this">
-                    <input type="checkbox" required class="form__terms"></input><label class="form__label">I agree to terms &amp; conditions.</label>
-                </div>
-                    <button class="form__btn-submit" id="btn-submit">Submit</button>
+                    <div class="form__align-this">
+                        <input type="checkbox" required class="form__terms"></input><label class="form__label">I agree to terms &amp; conditions.</label>
+                    </div>
+                        <button class="form__btn-submit" id="btn-submit">Submit</button>
+                        <button class="form__btn-submit" id="btn-createNew">Create new acc!</button>
                 </div>
             </form>
         </div>
@@ -38,8 +43,8 @@
                 <label for="inputTask" class="todoForma__labelInputTask">New Task:</label>
                 <input name="inputTask" type="text" class="todoForma__inputTask" placeholder="Task..." id="inputTask"></input>
                 <button class="todoForma__btnTodoAdd" id="btn-ToDoAdd"><i class="fas fa-check"></i></button>
-                <input type="text" placeholder="Search..." class="todoForma__search" ></input>
-                <select class="todoForma__select">
+                <input type="text" placeholder="Search..." class="todoForma__search" id='todoSearch'></input>
+                <select class="todoForma__select" id="selectList" value="all">
                     <option class="todoForma__selectItem" value="all">All</option>
                     <option class="todoForma__selectItem" value="done">Done</option>
                     <option class="todoForma__selectItem" value="not-done">Not-Done</option>
