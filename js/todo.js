@@ -5,10 +5,12 @@ const selectList = document.getElementById('selectList');
 const selectOption = document.getElementsByTagName('option');
 const searchTab = document.getElementById('todoSearch');
 
-// Array of ToDos
-let todoArray = [{
-    tekst: inputTask.value
-}];
+// Array of ToDos             // Kada stavim da je todoArray niz objekata da bi radio search, select prestane da radi
+// let todoArray = [{
+//     tekst: inputTask.value,
+// }];
+
+let todoArray = [];
 
 // Function for creation of new List Item on click
 const newElement = () => {

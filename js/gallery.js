@@ -7,10 +7,10 @@ let count = 1;
 
 btnNext.addEventListener('click', (e) => {
     
-    if(count > 4){
+    if(count > 5){
         count = 1;
     }
-    photo.src = `img/picture${count}.png`;
+    photo.src = `img/picture${count}.jpg`;
     count++
 
 })
@@ -19,9 +19,9 @@ btnNext.addEventListener('click', (e) => {
 btnPrev.addEventListener('click', (e) => {
 
     if(count < 1){
-        count = 4;
+        count = 5;
     }
-    photo.src = `img/picture${count}.png`;
+    photo.src = `img/picture${count}.jpg`;
     count--
 
 })

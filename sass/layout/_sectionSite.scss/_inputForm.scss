@@ -1,11 +1,11 @@
 .todoBox {
-    width: 35%;
-    margin-top: 3rem;
+    margin-top: 5rem;
     height: 15rem;
     border: .5rem solid #0C3B2E;
     border-radius: 1.5rem;
     background-color: #FFE7D0;
-    display: inline-block;
+    display: flex;
+    width: 100%;
 }
 
 .todoForma{
@@ -14,7 +14,7 @@
     &__search{
         display: inline-block;
         margin-right: 2rem;
-        width: 78%;
+        width: 70%;
         padding: .5rem;
         background-color: #afafaffd;
         outline: none;
@@ -53,7 +53,7 @@
         display: inline-block;
         padding: .5rem;
         font-size: 1.6rem;
-        width: 60%;
+        width: 54%;
         background-color: #afafaffd;
         border: 1px solid #1B1B1B;
         border-radius: 50rem;

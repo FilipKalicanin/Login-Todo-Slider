@@ -38,37 +38,43 @@
     </section>
 
     <section class="section-site visibilityNone" id="sectionSite">
-        <div class="todoBox">
-            <form action="#" class="todoForma" name="todoForma">
-                <label for="inputTask" class="todoForma__labelInputTask">New Task:</label>
-                <input name="inputTask" type="text" class="todoForma__inputTask" placeholder="Task..." id="inputTask"></input>
-                <button class="todoForma__btnTodoAdd" id="btn-ToDoAdd"><i class="fas fa-check"></i></button>
-                <input type="text" placeholder="Search..." class="todoForma__search" id='todoSearch'></input>
-                <select class="todoForma__select" id="selectList" value="all">
-                    <option class="todoForma__selectItem" value="all">All</option>
-                    <option class="todoForma__selectItem" value="done">Done</option>
-                    <option class="todoForma__selectItem" value="not-done">Not-Done</option>
-                </select>
-            </form>
-        </div>
+        <div class="flexcontainer">
 
-        <div class="gallery">
-            <h2 class="gallery__heading">How i did it:</h2>
-            <div class="gallery__photos">
-                <button class="gallery__btnGalleryPrev" id="btn-galleryPrev"><i class="fas fa-chevron-left"></i></button>
-                <button class="gallery__btnGalleryNext" id="btn-galleryNext"><i class="fas fa-chevron-right"></i></button>
-                <img src="img/background1st.jpg" alt="photo" class="gallery__item" id="galleryPhoto"/>
+            <div class="leftSide">
+                <div class="todoBox">
+                    <form action="#" class="todoForma" name="todoForma">
+                        <label for="inputTask" class="todoForma__labelInputTask">New Task:</label>
+                        <input name="inputTask" type="text" class="todoForma__inputTask" placeholder="Task..." id="inputTask"></input>
+                        <button class="todoForma__btnTodoAdd" id="btn-ToDoAdd"><i class="fas fa-check"></i></button>
+                        <input type="text" placeholder="Search..." class="todoForma__search" id='todoSearch'></input>
+                        <select class="todoForma__select" id="selectList" value="all">
+                            <option class="todoForma__selectItem" value="all">All</option>
+                            <option class="todoForma__selectItem" value="done">Done</option>
+                            <option class="todoForma__selectItem" value="not-done">Not-Done</option>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="newTasks" id="divNewTasks">
+                    <!-- <div class="task">
+                        <p class="taskText">consectetur adipisicing elit. Alias, quis.</p>
+                        <button class="btnDone" id="btnTaskDone">&check;</button>
+                        <button class="btnRemove" id="btnTaskRemove">&times;</button>
+                    </div> -->
+                </div>
             </div>
+
+            <div class="rightSide">
+                <div class="gallery">
+                    <h2 class="gallery__heading">Gallery:</h2>
+                    <button class="gallery__btnGalleryPrev" id="btn-galleryPrev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="gallery__btnGalleryNext" id="btn-galleryNext"><i class="fas fa-chevron-right"></i></button>
+                    <img src="img/background1st.jpg" alt="photo" class="gallery__item" id="galleryPhoto"/>
+                </div>
+            </div>
+
         </div>
 
-
-        <div class="newTasks" id="divNewTasks">
-            <!-- <div class="task">
-                <p class="taskText">consectetur adipisicing elit. Alias, quis.</p>
-                <button class="btnDone" id="btnTaskDone">&check;</button>
-                <button class="btnRemove" id="btnTaskRemove">&times;</button>
-            </div> -->
-        </div>
     </section>
 </body>
 </html>
