@@ -58,6 +58,8 @@ btn_newAcc.addEventListener('click', (e) => {
 
 btn_submit.addEventListener('click', (e) => {
 
+    e.preventDefault();
+
     usersArray.map((el) => {
         if(el.username == inputEmail.value && el.password == inputPassword.value){
             document.getElementById('sectionSite').classList.remove('visibilityNone');

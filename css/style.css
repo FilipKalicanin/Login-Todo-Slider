@@ -10,6 +10,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media (max-width: 72.37em) {
+    html {
+      font-size: 56%; } }
 
 body {
   font-family: sans-serif;
@@ -170,7 +173,6 @@ body {
 
 .todoBox {
   margin-top: 5rem;
-  height: 15rem;
   border: .5rem solid #0C3B2E;
   border-radius: 1.5rem;
   background-color: #FFE7D0;
@@ -190,6 +192,9 @@ body {
     border-radius: 50rem;
     font-size: 1.4rem;
     color: #1B1B1B; }
+    @media (max-width: 72.37em) {
+      .todoForma__search {
+        margin-bottom: 2rem; } }
     .todoForma__search::placeholder {
       padding-left: 2rem;
       color: #1B1B1B; }
@@ -207,6 +212,9 @@ body {
     color: #323232;
     margin-right: 1rem;
     margin-bottom: 1.5rem; }
+    @media (max-width: 72.37em) {
+      .todoForma__labelInputTask {
+        display: block; } }
   .todoForma__inputTask {
     display: inline-block;
     padding: .5rem;
@@ -217,6 +225,9 @@ body {
     border-radius: 50rem;
     outline: none;
     margin-right: 2rem; }
+    @media (max-width: 72.37em) {
+      .todoForma__inputTask {
+        margin-bottom: 2rem; } }
     .todoForma__inputTask::placeholder {
       padding-left: 2rem;
       color: #1B1B1B; }

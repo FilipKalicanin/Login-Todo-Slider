@@ -1,0 +1,17 @@
+//Media Query Manager
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == 'srednja' {
+        @media (max-width: 72.37em) { @content };
+    }
+
+    @if $breakpoint == 'mala' {
+        @media (max-width: 37.5em) { @content };
+    }
+
+    @if $breakpoint == 'velika' {
+        @media (min-width: 72.5em) { @content };
+    }
+
+}
