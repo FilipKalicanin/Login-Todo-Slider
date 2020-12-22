@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,7 +44,7 @@
                 <div class="todoBox">
                     <form action="#" class="todoForma" name="todoForma">
                         <label for="inputTask" class="todoForma__labelInputTask">New Task:</label>
-                        <input name="inputTask" type="text" class="todoForma__inputTask" placeholder="Task..." id="inputTask"></input>
+                        <input name="inputTask" type="text" class="todoForma__inputTask" placeholder="Task..." id="inputTask" maxlength="35"></input>
                         <button class="todoForma__btnTodoAdd" id="btn-ToDoAdd"><i class="fas fa-check"></i></button>
                         <input type="text" placeholder="Search..." class="todoForma__search" id='todoSearch'></input>
                         <select class="todoForma__select" id="selectList" value="all">
@@ -69,7 +69,13 @@
                     <h2 class="gallery__heading">Gallery:</h2>
                     <button class="gallery__btnGalleryPrev" id="btn-galleryPrev"><i class="fas fa-chevron-left"></i></button>
                     <button class="gallery__btnGalleryNext" id="btn-galleryNext"><i class="fas fa-chevron-right"></i></button>
-                    <img src="img/background1st.jpg" alt="photo" class="gallery__item" id="galleryPhoto"/>
+                    <img src="img/picture1.jpg" alt="photo" class="gallery__item" id="galleryPhoto"/>
+                </div>
+                <div class="vote">
+                    <p class="totalLikes" id="totalLikes">Total likes: 0</p>
+                    <button class="vote__btnVoteLike" id="btnLike"><i class="fas fa-thumbs-up"></i></button>
+                    <button class="vote__btnVoteBest" id="btnBest"><i class="fas fa-crown"></i></button>
+                    <button class="vote__btnVoteDisslike" id="btnDisslike"><i class="fas fa-thumbs-down"></i></button>
                 </div>
             </div>
 

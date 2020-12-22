@@ -40,15 +40,21 @@ let usersArray = [{
     password:'123'
 }];
 
-// btn_newAcc.addEventListener('click', (e) => {
-//     usersArray.push(
-//         {
-//             username: inputEmail.value,
-//             password: inputPassword.value
-//         }
-//     )
-//         // console.log(usersArray);
-// });
+btn_newAcc.addEventListener('click', (e) => {
+    
+    if(inputEmail.value !== "" && inputPassword.value !== ""){
+    usersArray.push(
+        {
+            username: inputEmail.value,
+            password: inputPassword.value
+        }
+    )
+    }else{
+        alert('Wow, such an empty.')
+    }
+   
+});
+
 
 btn_submit.addEventListener('click', (e) => {
 
@@ -56,7 +62,7 @@ btn_submit.addEventListener('click', (e) => {
         if(el.username == inputEmail.value && el.password == inputPassword.value){
             document.getElementById('sectionSite').classList.remove('visibilityNone');
             document.getElementById('sectionLogin').classList.add('visibilityNone');
-        }else {
+        }else if(el.username !== inputEmail.value) {
             alert('Wrong username or password');
         }
     })
