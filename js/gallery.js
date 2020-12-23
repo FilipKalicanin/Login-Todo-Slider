@@ -8,7 +8,6 @@ let btnLike = document.getElementById('btnLike'); // dugme povecaj total likes n
 let btnDisslike = document.getElementById('btnDisslike'); // dugme umanji total likes na slici
 let btnBest = document.getElementById('btnBest'); // prikazi sliku sa najvecim total likes
 
-    
 let img1 = {
     src: 'img/picture1.jpg',
     likes: 0,
@@ -34,11 +33,17 @@ let img5 = {
     likes: 0,
     id: 5
 }
-
-let arrayImg = [img1, img2 ,img3, img4, img5];
+///////////////////////////////////////////////////////////////////////////////////////////
+let arrayImg = [img1, img2 ,img3, img4, img5]; //Niz objekata
 
 let count = 0;
 
+
+// function animation(){
+//     photo.classList.add('slider');
+// }
+
+// Prikazi sledecu sliku
 btnNext.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -48,10 +53,13 @@ btnNext.addEventListener('click', (e) => {
         count = 0;
     };
     photo.src = arrayImg[count].src;
+    
+    // animation();
+
     totalLikes.textContent = `Total likes: ${arrayImg[count].likes}`;
 
 })
-
+// Prikazi prethodnu sliku
 btnPrev.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -63,22 +71,24 @@ btnPrev.addEventListener('click', (e) => {
 
     photo.src = arrayImg[count].src;
 
+    // animation();
+
     totalLikes.textContent = `Total likes: ${arrayImg[count].likes}`;
 
 })
-
+// Lajk
 btnLike.addEventListener('click', (e)=>{
     e.preventDefault();
     arrayImg[count].likes++;
     totalLikes.textContent = `Total likes: ${arrayImg[count].likes}`;
 })
-
+//Dislajk
 btnDisslike.addEventListener('click', (e)=>{
     e.preventDefault();
     arrayImg[count].likes--;
     totalLikes.textContent = `Total likes: ${arrayImg[count].likes}`;
 })
-
+//Slika winner
 btnBest.addEventListener('click', (e)=>{
     e.preventDefault();
     winner = [];
@@ -89,6 +99,7 @@ btnBest.addEventListener('click', (e)=>{
         if(arrayImg[i].likes === winner[0]){
             photo.src = arrayImg[i].src;
             totalLikes.textContent = `Total likes: ${arrayImg[i].likes}`;
+            count = i;
         }
     }
 })

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/app.js" defer></script>
     <script src="js/login.js" defer></script>
     <script src="js/todo.js" defer></script>
     <script src="js/gallery.js" defer></script>
@@ -28,7 +27,7 @@
                     <input type="text" required placeholder="Username" class="form__inputEmail" id="inputEmail"></input>
                     <input type="password" required placeholder="Password" class="form__inputPassword" id="inputPassword"></input>
                     <div class="form__align-this">
-                        <input type="checkbox" required class="form__terms"></input><label class="form__label">I agree to terms &amp; conditions.</label>
+                        <input type="checkbox" class="form__terms" id="checkbox"></input><label class="form__label">I agree to terms &amp; conditions.</label>
                     </div>
                         <button class="form__btn-submit" id="btn-submit">Submit</button>
                         <button class="form__btn-submit" id="btn-createNew">Create new acc!</button>

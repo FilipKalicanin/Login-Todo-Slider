@@ -5,7 +5,6 @@ const selectList = document.getElementById('selectList');
 const selectOption = document.getElementsByTagName('option');
 const searchTab = document.getElementById('todoSearch');
 
-
 let todoArray = [];
 
 // Function for creation of new List Item on click
@@ -54,7 +53,6 @@ const newElement = () => {
    
 }
 
-
 // Implemetation of 'newElement' function + basic input check
 btn_toDoAdd.addEventListener('click', (e) => {
     e.preventDefault();
@@ -67,7 +65,6 @@ btn_toDoAdd.addEventListener('click', (e) => {
     inputTask.value = '';
 
 })
-
 
 // Select button / Done with class manipulation
 selectList.addEventListener('change', (e) => {
@@ -94,10 +91,7 @@ selectList.addEventListener('change', (e) => {
 
 })
 
-
 // Search tab
-
-
 searchTab.addEventListener('input', (e) => {
 
     todoArray.filter(el => {
