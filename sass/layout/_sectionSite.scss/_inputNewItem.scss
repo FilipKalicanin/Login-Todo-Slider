@@ -1,7 +1,11 @@
 .newTasks {
     padding: 1rem;
     display: inline-block;
-    width: 70%;
+    width: 40rem;
+    height: 75rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    overflow: auto;
 }
 
 .task {
@@ -48,7 +52,7 @@
 }
 
 .btnRemove{ //btnRemove
-    color: 	#B22222;
+    color:  #B22222;
     padding: .5rem;
     font-size: 2rem;
     margin-left: 1rem;
@@ -67,4 +71,29 @@
         transform: scale(1);
         transition: .1s;
     }
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+  
+
+::-webkit-scrollbar-track {
+    box-shadow: 0rem 0rem 3rem .1rem rgb(158, 158, 158);
+    border-radius: 50rem;
+}
+   
+
+::-webkit-scrollbar-thumb {
+    background: #0f2027; 
+    border-radius: 5rem;
+}
+  
+
+::-webkit-scrollbar-thumb:hover {
+    background: #294e5e;
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(0,0,0,0.5);
 }
